@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+               --base-color: #f8f9fa;
+     --alternate-base-color: white;
+       --primary-text-color: #1c3d5a;
+     --secondary-text-color: #2f3a45;
+       --first-accent-color: #4a90e2;
+      --second-accent-color: #d0e6fa;
+  --positive-feedback-color: #4caf50;
+  --negative-feedback-color: #d32f2f;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--base-color) url(../img/background.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-size: cover;
+  color: var(--primary-text-color);
+  font: 400 1rem/1 'Roboto', sans-serif;
+}
+
+/* MAIN */
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4.8rem auto;
+  padding: 0 1.2rem;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  margin-bottom: 2.4rem;
+}
+
+#title {
+  font-family: 'Raleway', sans-serif;
+  font-optical-sizing: auto;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+#description {
+  color: var(--secondary-text-color);
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+/* FORM */
+#survey-form {
+  background-color: var(--primary-text-color);
+  border-radius: 0.8rem;
+  color: var(--base-color);
+  padding: 1.2rem;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset:first-of-type, :nth-of-type(2) {
+  margin-bottom: 1.2rem;
+}
+
+fieldset p {
+  margin-bottom: 1.6rem;
+  text-align: left;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+label, .question, input {
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+label, .question {
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+label:has(input) {
+  align-items: center;
+  display: flex;
+  gap: 1.2rem;
+  height: 3.2rem;
+  justify-content: flex-start;
+}
+
+label:has(input):last-of-type {
+  margin-bottom: 1.6rem;
+}
+
+label:has(input) span {
+  height: 3.2rem;
+  line-height: 3.2rem;
+}
+
+label > input {
+  margin-bottom: 0;
+  vertical-align: middle;
+  width: 3.2rem;
+}
+
+label > input[type="checkbox"] {
+  appearance: checkbox;
+}
+
+label > input[type="radio"] {
+  appearance: radio;
+}
+
+small {
+  font-size: 1.4rem;
+}
+
+::placeholder {
+  color: var(--second-accent-color);
+}
+
+input, select, textarea, button {
+  appearance: none;
+  background-color: var(--base-color);
+  border-radius: 0.4rem;
+  border: none;
+  color: var(--primary-text-color);
+  font-family: inherit;
+  font-size: 1.6rem;
+  line-height: 2;
+  min-height: 3.2rem;
+  padding: 0 0.8rem;
+  outline: none;
+  width: 100%;
+}
+
+input[type="number"], select {
+  margin-bottom: 1.6rem;
+}
+
+select, button {
+  cursor: pointer;
+}
+
+textarea {
+  height: 9.6rem;
+  margin-bottom: 2.8rem;
+  resize: none;
+}
+
+button {
+  color: var(--alternate-base-color);
+}
+
+button[type="submit"] {
+  background-color: var(--positive-feedback-color);
+  margin-bottom: 1.2rem;
+}
+
+button[type="reset"] {
+  background-color: var(--negative-feedback-color);
+}
+
+/* FOOTER */
+footer {
+  color: var(--secondary-text-color);
+}
+
+footer p {
+  margin: 1.2rem auto;
+}
+
+@media only screen and (min-width: 576px) {
+  form {
+    max-width: 54rem;
+  }
+}

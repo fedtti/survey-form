@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description"><em>Thanks for helping us make the platform better!</em></p>
+      </header>
+      <form id="survey-form">
+        <fieldset>
+          <legend class="sr-only">Customer Information</legend>
+          <label id="name-label" for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" autocomplete="name" type="text" required aria-describedby="name-validation">
+          <p id="name-validation"><small>Please, provide your full name.</small></p>
+          <label id="email-label" for="email">Email</label>
+          <input id="email" name="email" placeholder="Your email address" autocomplete="email" type="email" required aria-describedby="email-validation">
+          <p id="email-validation"><small>Please, provide a valid email address.</small></p>
+          <label id="number-label" for="number">Age <small>(optional)</small></label>
+          <input id="age" name="age" placeholder="Your age" type="number" min="13" max="99">
+        </fieldset>
+        <fieldset>
+          <legend class="sr-only">Rating</legend>
+          <p class="question">How satisfied are you with the platform?</p>
+          <label><input name="satisfaction" value="1" type="radio"> <span>Very Dissatisfied</span></label>
+          <label><input name="satisfaction" value="2" type="radio"> <span>Dissatisfied</span></label>
+          <label><input name="satisfaction" value="3" type="radio"> <span>Neutral</span></label>
+          <label><input name="satisfaction" value="4" type="radio"> <span>Satisfied</span></label>
+          <label><input name="satisfaction" value="5" type="radio"> <span>Very Satisfied</span></label>
+          <p class="question">Which feature do you use the most? <small>(select all that apply)</small></p>
+          <label><input value="feature-a" type="checkbox"> <span>Feature A</span></label>
+          <label><input value="feature-b" type="checkbox"> <span>Feature B</span></label>
+          <label><input value="feature-c" type="checkbox"> <span>Feature C</span></label>
+          <label><input value="feature-d" type="checkbox"> <span>Feature D</span></label>
+          <label><input value="other" type="checkbox"> <span>Other</span></label>
+          <label for="dropdown">What’s the main reason for your rating?</label>
+          <select id="dropdown">
+            <option value="" selected disabled>Select an option</option>
+            <option value="ease-of-use">Ease of Use</option>
+            <option value="functionality">Functionality</option>
+            <option value="design-layout">Design/Layout</option>
+            <option value="performance">Performance</option>
+            <option value="customer-support">Customer Support</option>
+            <option value="other">Other</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend class="sr-only">Suggestions</legend>
+          <label for="suggestions">Do you have any suggestions for improvement?</label>
+          <textarea id="suggestions" placeholder="Your suggestions…"></textarea>
+        </fieldset>
+        <button id="submit" type="submit">Submit</button>
+        <button id="reset" type="reset">Reset</button>
+      </form>
+      <footer>
+        <p><small>Copyright © 2024 <a href="http://federicomoretti.it/" target="_blank" rel="noopener noreferrer">Federico Moretti</a>. All rights reserved.</small></p>
+      </footer>
+    </main>
+  </body>
+</html>
